@@ -12,3 +12,5 @@ RUN ./gradlew build
 
 # Specify the entry point for the container
 CMD ["java", "-jar", "build/libs/your-app.jar"]
+
+RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
