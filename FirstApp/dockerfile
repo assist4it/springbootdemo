@@ -9,12 +9,12 @@ COPY build.gradle settings.gradle ./
 # Copy the entire source code
 COPY src ./src
 
-RUN ["chmod", "+x", "./gradlew"]
+#RUN ["chmod", "+x", "./gradlew"]
 
 # Build the Gradle project
 RUN ./gradlew build
 
 # Specify the entry point for the container
-CMD ["java", "-jar", "build/libs/your-app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 #RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
