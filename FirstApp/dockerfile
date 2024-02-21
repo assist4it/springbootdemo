@@ -9,6 +9,8 @@ COPY build.gradle settings.gradle ./
 # Copy the entire source code
 COPY src ./src
 
+RUN ["chmod", "+x", "gradlew"]
+
 # Build the Gradle project
 RUN ./gradlew build
 
