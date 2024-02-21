@@ -12,7 +12,7 @@ COPY src ./src
 #RUN ["chmod", "+x", "./gradlew"]
 
 # Build the Gradle project
-RUN ./gradlew build
+RUN gradlew build
 
 # Specify the entry point for the container
 ENTRYPOINT ["java", "-jar", "/app.jar"]
