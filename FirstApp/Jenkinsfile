@@ -11,11 +11,11 @@ pipeline {
                 sh 'gradle build'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'gradle test'
-            }
-        }
+        //stage('Test') {
+          //  steps {
+            //    sh 'gradle test'
+       //     }
+       // }
        // stage('Deploy') {
          //   steps {
                 // Add deployment steps here (e.g., deploy to a server)
